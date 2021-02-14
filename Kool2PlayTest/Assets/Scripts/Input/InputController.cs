@@ -33,9 +33,8 @@ namespace Kool2Play.Utility.Input
                 UnityEngine.Input.GetAxis("Vertical"))
             );
 
-            RaycastHit hit;
             Ray ray = _camera.ScreenPointToRay(UnityEngine.Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, _maxDistance))
+            if (Physics.Raycast(ray, out RaycastHit hit, _maxDistance))
             {
                 _onMouseUpdate.Invoke(hit.point);
             }

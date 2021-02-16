@@ -11,15 +11,15 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Level/Ground
+  - Level/Obstacles
+  - Behaviours/Enemy
+  - Behaviours/Player
+  - Behaviours/EnemyDead
+  - Weapon/BulletCharacter
+  - Weapon/BulletEnemy
+  - Weapon/Weapon
+  - Behaviour/EnemyDead
   - 
   - 
   - 

@@ -54,6 +54,8 @@ namespace Kool2Play.Behaviour
         public override void ResetHealth(int amount)
         {
             _health = (amount > _maxHealth) ? _maxHealth : amount;
+            _onHealthChangedInner.Invoke(Percent);
+            _onHealthChanged.Invoke(Percent);
         }
 
         public override void ModifyHealth(int amount)

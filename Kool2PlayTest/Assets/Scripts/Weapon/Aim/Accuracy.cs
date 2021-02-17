@@ -117,6 +117,37 @@ namespace Kool2Play.Weapons.Aiming
             return true;
         }
 
+        /// <summary>
+        /// Works only as cone
+        /// </summary>
+        public bool IsInside(Vector3 point)
+        {
+            // beginPoint -> _parent.position
+            Vector3 endPoint = (_parent.position + (_parent.forward * _distance));
+
+            // directionBase -> _parent.forward
+            Vector3 pointDirection = (point - _parent.position);
+            Vector3 pointProjection = _parent.forward * Vector3.Dot(_parent.forward, pointDirection);
+            Vector3 betweenPoint = (_parent.position + pointProjection);
+
+            float pointDistance = Vector3.Distance(_parent.position, betweenPoint);
+            float endDistance = Vector3.Distance(_parent.position, endPoint);
+
+            if (pointDistance > endDistance) return false;
+
+            float beginRadius = (_begin.Radius * (1 - _begin.Accuracy));
+            float endRadius = (_end.Radius * (1 - _end.Accuracy));
+
+            // From 0 to 1
+            float framePart = Utility.Extentions.VectorOperations.Map(pointDistance, 0.0f, endDistance, 0.0f, 1.0f);
+
+            // From beginRadius to endRadius
+            float estimatedRadius = Utility.Extentions.VectorOperations.Map(framePart, 0.0f, 1.0f, beginRadius, endRadius);
+            // Actual radius(distance) from estimated point
+            float actualRadius = Vector3.Distance(betweenPoint, point);
+
+            return !(actualRadius > estimatedRadius);
+        }
 
         public void SetEndAccuracy(float percent)
         {

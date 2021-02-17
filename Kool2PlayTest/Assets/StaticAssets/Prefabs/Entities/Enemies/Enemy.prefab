@@ -64,7 +64,10 @@ MonoBehaviour:
   _damageEffectTime: 0.5
   _deadMaterial: {fileID: 0}
   _dieTime: 3
-  _layerOnDeath: 
+  _layerOnDeath:
+    UseConstant: 0
+    ConstantValue: 
+    Variable: {fileID: 11400000, guid: 7f54c4e3d7cf6474097fe3122fe3e904, type: 2}
   _gfxRenderer: {fileID: 0}
 --- !u!114 &2573598275760398960
 MonoBehaviour:

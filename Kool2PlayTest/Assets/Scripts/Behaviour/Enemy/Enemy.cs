@@ -27,7 +27,7 @@ namespace Kool2Play.Behaviour.Enemies
         [Header("Dead")]
         [SerializeField] private Material _deadMaterial;
         [SerializeField] private float _dieTime;
-        [SerializeField] private string _layerOnDeath;
+        [SerializeField] private Utility.Variables.StringReference _layerOnDeath;
 
         [Header("Component References")]
         [SerializeField] protected Renderer _gfxRenderer;

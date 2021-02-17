@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &988748605994209599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1220045257809438447}
+  m_Layer: 0
+  m_Name: ShotFlow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1220045257809438447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988748605994209599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7263853831974605185}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7247731916660724259
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,6 +39,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263853831974605185}
+  - component: {fileID: 2788526374142671744}
+  - component: {fileID: 1835611192329975025}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -27,10 +59,76 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1220045257809438447}
   - {fileID: 897342884527594070}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2788526374142671744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247731916660724259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c39b441b829a5042941e3618e71cf8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 0
+  _flowLengthDraw: 1
+  _bulletFlowPath: {fileID: 1220045257809438447}
+  _accuracy: {fileID: 1835611192329975025}
+  _onShot:
+    UiResponce:
+      m_PersistentCalls:
+        m_Calls: []
+  _onReload:
+    UiResponce:
+      m_PersistentCalls:
+        m_Calls: []
+  _onChangeAmmo:
+    UiResponce:
+      m_PersistentCalls:
+        m_Calls: []
+  _onChangeShootingMode:
+    UiResponce:
+      m_PersistentCalls:
+        m_Calls: []
+  _activeAmmo: 0
+  _ammo:
+    _handler: {fileID: 0}
+    _data: []
+  _activeShooting: 0
+  _shooting:
+    _handler: {fileID: 0}
+    _data: []
+--- !u!114 &1835611192329975025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7247731916660724259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f91174e1b19942bf5219ece97b6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parent: {fileID: 1220045257809438447}
+  _edgeCount: 10
+  _distance: 1
+  _begin:
+    Radius: 1
+    ColorRadius: {r: 0, g: 1, b: 0, a: 1}
+    Accuracy: 0.5
+    ColorAccuracy: {r: 1, g: 1, b: 0, a: 1}
+  _end:
+    Radius: 1
+    ColorRadius: {r: 0, g: 1, b: 0, a: 1}
+    Accuracy: 0.5
+    ColorAccuracy: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &7261936615679786095
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,5 +157,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7263853831974605185}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

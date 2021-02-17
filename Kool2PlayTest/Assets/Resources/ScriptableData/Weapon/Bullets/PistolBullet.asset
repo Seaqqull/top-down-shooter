@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7ae0bf4b0699046b6bfe4b4b15ec38, type: 3}
+  m_Name: PistolBullet
+  m_EditorClassIdentifier: 
+  BulletObject: {fileID: 5293123913190764801, guid: 01c8685bf14ae974d8edb9134e9a2c8d, type: 3}
+  LookRotation: 1
+  ShotAction:
+    Audio: {fileID: 0}
+    Particle: {fileID: 0}
+  FlyAction:
+    Audio: {fileID: 0}
+    Particle: {fileID: 0}
+  CollisionAction:
+    Audio: {fileID: 0}
+    Particle: {fileID: 0}
+  DestroyAction:
+    Audio: {fileID: 0}
+    Particle: {fileID: 0}
+  Damage: 40
+  Speed: 2000
+  Range: 1000
+  TargetMask:
+    serializedVersion: 2
+    m_Bits: 448

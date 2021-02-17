@@ -38,6 +38,23 @@ namespace Kool2Play.Weapons.Data
 
 
     [Serializable]
+    public class WeaponAutoUser
+    {
+        public WeaponType Type;
+        [Header("Positioning")]
+        public Vector3 Shift;
+        public Quaternion Rotation;
+
+        [Header("Shooting")]
+        public bool ActionOnMove;
+        public bool AutoAim;
+        public bool AutoShot;
+        public bool AutoReload;
+
+        [Header("Movement")]
+        public float MovementMultiplier = 1.0f;
+    }
+    [Serializable]
     public class ActionResponce
     {
         public UnityEvent UiResponce;

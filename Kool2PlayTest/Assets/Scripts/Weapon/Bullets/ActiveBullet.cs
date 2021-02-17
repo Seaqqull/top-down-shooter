@@ -101,7 +101,7 @@ namespace Kool2Play.Weapons.Bullets
 
         protected virtual void OnBulletDestroy()
         {
-            Destroy(gameObject);
+            Destroy(GameObj);
         }
 
         protected virtual void OnBulletDestroy(Collider hit, bool spawnInHit = false)

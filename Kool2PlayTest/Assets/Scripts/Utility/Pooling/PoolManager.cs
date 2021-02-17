@@ -8,12 +8,15 @@ namespace Kool2Play.Utility.Pooling
 {
     public class PoolManager : MonoBehaviour
     {
+        private static PoolManager _instance;
+
         [SerializeField] private Variables.FloatReference _updateTime;
 
         private List<PoolPoint> _delayedPool;
         private List<Pooler> _poolers;
+        private bool _initialized;
 
-        public List<PoolPoint> DelayedPool
+        private List<PoolPoint> DelayedPool
         {
             get
             {
@@ -21,10 +24,42 @@ namespace Kool2Play.Utility.Pooling
                        (this._delayedPool = new List<PoolPoint>());
             }
         }
-
-
-        public void Awake()
+        public static PoolManager Instance
         {
+            get
+            {
+                if (_instance is { }) return _instance;
+
+                _instance = FindObjectOfType<PoolManager>();
+                if (_instance is { }) return _instance;
+
+
+                GameObject instance = new GameObject(nameof(PoolManager), typeof(PoolManager));
+                instance.transform.SetAsFirstSibling();
+
+                _instance = instance.GetComponent<PoolManager>();
+                _instance.Initialize();
+
+                return _instance;
+            }
+        }
+
+
+        private void Awake()
+        {
+            if (_instance is null)
+            {
+                _instance = this;
+                Initialize();
+                return;
+            }
+            Destroy(gameObject);
+        }
+
+
+        private void Initialize()
+        {
+
             _poolers = FindObjectsOfType<Pooler>().ToList();
             StartCoroutine(PoolDelayed());
         }
@@ -52,6 +87,11 @@ namespace Kool2Play.Utility.Pooling
         }
 
 
+        public void ClearDelayedPool()
+        {
+            DelayedPool.Clear();
+        }
+
         public GameObject Pool(PoolPoint point)
         {
             GameObject pooled =
@@ -64,6 +104,11 @@ namespace Kool2Play.Utility.Pooling
             objTransform.position = point.Position;
 
             return pooled;
+        }
+
+        public void AddToDelayedPool(PoolPoint point)
+        {
+            DelayedPool.Add(point);
         }
     }
 }

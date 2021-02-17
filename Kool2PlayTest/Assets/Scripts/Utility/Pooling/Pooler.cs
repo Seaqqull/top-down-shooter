@@ -6,7 +6,7 @@ namespace Kool2Play.Utility.Pooling
 {
     public class Pooler : MonoBehaviour 
     {
-        protected Variables.IntegerReference _idGameObject;
+        [SerializeField] protected Variables.IntegerReference _idGameObject;
 
         [SerializeField] protected Transform _spawnPosition;
         [SerializeField] protected GameObject _spawnObject;
@@ -69,7 +69,7 @@ namespace Kool2Play.Utility.Pooling
             }
 
             dummyIn.transform.parent = _queue.transform;
-            dummyIn.SetActive(true);
+            dummyIn.SetActive(false);
 
             _objectsToPool.Enqueue(dummyIn);
         }

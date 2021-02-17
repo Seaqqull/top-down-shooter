@@ -3,7 +3,7 @@
 
 namespace Kool2Play.Weapons.Bullets
 {
-    [CreateAssetMenu(menuName = "Bullet/Create")]
+    [CreateAssetMenu(menuName = "Weapon/Bullet/Create")]
     public class Bullet : ScriptableObject
     {
         public GameObject BulletObject;

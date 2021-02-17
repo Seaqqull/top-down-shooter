@@ -9,9 +9,9 @@ namespace Kool2Play.Weapons
     {
         [Flags]
         public enum UIUpdateMode { None, MagazineAmount, OverallAmount, Progress = 4 }
-        [System.Serializable]
+        [Serializable]
         public class AmmoComputeData : Utility.ComputingData<Ammo.AmmoHandler, Ammo.AmmoController> { }
-        [System.Serializable]
+        [Serializable]
         public class ShootingComputeObject : Utility.ComputingData<Shooting.ShootingHandler, Shooting.ShootingMode> { }
 
 

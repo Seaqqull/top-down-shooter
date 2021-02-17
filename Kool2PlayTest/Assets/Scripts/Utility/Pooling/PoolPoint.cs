@@ -16,7 +16,7 @@ namespace Kool2Play.Utility.Pooling
         [SerializeField] protected Events.ActionBoolSO _emitCheckerSO;
         [SerializeField] protected Events.ActionBoolBehaviour _emitCheckerBehaviour;
 
-        private System.Action _onLatePool;
+        private System.Action _onLatePool = delegate { };
 
         public event System.Action OnLatePool
         {

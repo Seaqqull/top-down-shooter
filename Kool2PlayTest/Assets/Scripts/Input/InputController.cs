@@ -9,10 +9,15 @@ namespace Kool2Play.Utility.Input
     {
         [Serializable]
         public class InputUpdateEvent : UnityEvent<Vector3> { }
+        [Serializable]
+        public class InputUpdateFloatEvent : UnityEvent<float> { }
 
 
 #pragma warning disable CS0649
+        [Header("Keyboard")]
         [SerializeField] private InputUpdateEvent _onMovementUpdate;
+        [Header("Mouse")]
+        [SerializeField] private InputUpdateFloatEvent _onMouseWheel;
         [SerializeField] private InputUpdateEvent _onMouseUpdate;
         [SerializeField] private UnityEvent _onMouseClick;
         [SerializeField] [Range(0.0f, 50.0f)] private float _maxDistance = 50.0f;
@@ -45,6 +50,14 @@ namespace Kool2Play.Utility.Input
             // Mouse click
             if (UnityEngine.Input.GetMouseButtonDown(0))
                 _onMouseClick.Invoke();
+
+            // Mouse wheel
+            var wheelDelta = UnityEngine.Input.mouseScrollDelta.y;
+            
+            if (Mathf.Abs(wheelDelta) > float.Epsilon)
+            {
+                _onMouseWheel.Invoke(wheelDelta);
+            }
         }
 
     }

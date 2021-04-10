@@ -143,6 +143,10 @@ PrefabInstance:
       value: 0.4567
       objectReference: {fileID: 0}
     - target: {fileID: 1835611192329975025, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 5157758209218363212}
+    - target: {fileID: 1835611192329975025, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
       propertyPath: _distance
       value: 5
       objectReference: {fileID: 0}
@@ -167,9 +171,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2788526374142671744, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
+      propertyPath: _accuracy
+      value: 
+      objectReference: {fileID: 5621362969540439378}
+    - target: {fileID: 2788526374142671744, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
       propertyPath: _ammo._handler
       value: 
       objectReference: {fileID: 11400000, guid: 6e9af74dc4347504fa3bf6746be1b305, type: 2}
+    - target: {fileID: 2788526374142671744, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
+      propertyPath: _bulletFlowPath
+      value: 
+      objectReference: {fileID: 5157758209218363212}
     - target: {fileID: 2788526374142671744, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
       propertyPath: _flowLengthDraw
       value: 5
@@ -288,6 +300,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
+--- !u!114 &5621362969540439378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1835611192329975025, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
+  m_PrefabInstance: {fileID: 6303475358611085731}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f91174e1b19942bf5219ece97b6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &5157758209218363212 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1220045257809438447, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}
+  m_PrefabInstance: {fileID: 6303475358611085731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6561306950008357877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 897342884527594070, guid: 10e051ae302e1cc41948729d73e7afce, type: 3}

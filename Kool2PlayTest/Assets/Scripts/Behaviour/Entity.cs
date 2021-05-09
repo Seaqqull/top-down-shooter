@@ -52,7 +52,7 @@ namespace Kool2Play.Behaviour
             _health = GetComponent<Health>();
             
 
-            if (_health is null)
+            if (_health == null)
                 _health = Health.HealthNo.Instance;
             else
             {
@@ -62,7 +62,7 @@ namespace Kool2Play.Behaviour
 
             _body = GetComponent<Rigidbody>();
 
-            if (_aimPoint is null)
+            if (_aimPoint == null)
                 _aimPoint = GetComponentInChildren<Utility.Points.AimPoint>();
         }
 
@@ -117,7 +117,7 @@ namespace Kool2Play.Behaviour
 
         public Coroutine RunLaterValued(Action method, float waitSeconds)
         {
-            if ((waitSeconds < 0) || (method is null))
+            if ((waitSeconds < 0) || (method == null))
                 return null;
 
             return StartCoroutine(RunLaterCoroutine(method, waitSeconds));

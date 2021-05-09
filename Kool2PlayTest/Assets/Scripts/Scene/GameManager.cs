@@ -57,7 +57,7 @@ namespace Kool2Play.Scene
 
         private void Awake()
         {
-            if (_instance is null)
+            if (_instance == null)
             {
                 _instance = this;
                 Initialize();
@@ -71,7 +71,7 @@ namespace Kool2Play.Scene
         {
             if (_initialized) return;
             
-            if (_player is null)
+            if (_player == null)
                 _player = FindObjectOfType<Behaviour.Player.Player>();
 
             if (_player is { })
@@ -141,7 +141,7 @@ namespace Kool2Play.Scene
                 // Update of pool data
                 poolPoint.OnLatePool += () => {
                     GameObject newEnemy = Utility.Pooling.PoolManager.Instance.Pool(poolPoint);
-                    if (newEnemy is null) return;
+                    if (newEnemy == null) return;
 
                     _overalAmount.ApplyChange(1);
                     _onSpawn.Invoke();
@@ -163,7 +163,7 @@ namespace Kool2Play.Scene
 
         public void ChangeWeapon(bool flag)
         {
-            if (_player is null) return;
+            if (_player == null) return;
 
             _player.SetActiveWeapon((flag) ? 0 : 1);
         }
@@ -177,7 +177,7 @@ namespace Kool2Play.Scene
 
         public Coroutine RunLaterValued(Action method, float waitSeconds)
         {
-            if ((waitSeconds < 0) || (method is null))
+            if ((waitSeconds < 0) || (method == null))
                 return null;
 
             return StartCoroutine(RunLaterCoroutine(method, waitSeconds));

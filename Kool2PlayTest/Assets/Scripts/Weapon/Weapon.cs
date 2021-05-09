@@ -99,7 +99,7 @@ namespace Kool2Play.Weapons
         }
         public bool IsActionExecutable
         {
-            get { return (_actionCoroutine is null); }
+            get { return (_actionCoroutine == null); }
         }
         public Data.WeaponState State
         {
@@ -131,7 +131,7 @@ namespace Kool2Play.Weapons
 
         protected void OnDrawGizmos()
         {
-            if (_bulletFlowPath is null) return;
+            if (_bulletFlowPath == null) return;
 
             Gizmos.color = Color.yellow;
             Gizmos.DrawLine(_bulletFlowPath.position, _bulletFlowPath.position + _bulletFlowPath.forward * _flowLengthDraw);
@@ -424,7 +424,7 @@ namespace Kool2Play.Weapons
 
         public Coroutine RunLaterValued(Action method, float waitSeconds)
         {
-            if ((waitSeconds < 0) || (method is null))
+            if ((waitSeconds < 0) || (method == null))
                 return null;
 
             return StartCoroutine(RunLaterCoroutine(method, waitSeconds));

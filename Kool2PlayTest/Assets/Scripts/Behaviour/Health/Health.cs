@@ -29,7 +29,7 @@ namespace Kool2Play.Behaviour
             {
                 get
                 {
-                    if (_instance is null)
+                    if (_instance == null)
                     {
                         GameObject instance = new GameObject("HealthNo", typeof(HealthNo));
                         instance.transform.SetAsFirstSibling();

@@ -88,7 +88,7 @@ namespace Kool2Play.Weapons
         {
             _aim = new WeaponAim();
 
-            if (_pivot is null)
+            if (_pivot == null)
                 _pivot = transform;
         }
 

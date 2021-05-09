@@ -36,7 +36,7 @@ namespace Kool2Play.Weapons.Aiming
 #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
-            if (_parent is null) return;
+            if (_parent == null) return;
 
             bool errorFlag;
 

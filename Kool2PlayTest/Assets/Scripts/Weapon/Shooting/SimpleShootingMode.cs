@@ -16,7 +16,7 @@ namespace Kool2Play.Weapons.Shooting
                 Bullets.ActiveBullet aBullet = bullet.GetComponent<Bullets.ActiveBullet>();
 
 #if UNITY_EDITOR
-                if (aBullet is null)
+                if (aBullet == null)
                 {
                     Debug.LogError("There is no bullet component in bullet prefab.", weapon.Ammo.Bullet.BulletObject);
                     return;

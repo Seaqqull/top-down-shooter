@@ -233,7 +233,7 @@ namespace Kool2Play.Behaviour.Enemies
             // If not yet used the permission to attack
             if (_performAttack) return;
 
-            if (_target is null)
+            if (_target == null)
             {
                 _distanceToTarget = float.MaxValue;
                 return;
@@ -314,7 +314,7 @@ namespace Kool2Play.Behaviour.Enemies
             if (_performAttack)
                 Attack();
 
-            if (_target is null)
+            if (_target == null)
                 UpdatePath(Transform.position, 0.0f);
             else if (_performAttack || (_attacking && !_moveInAttack) || IsInAttackRange)
                 UpdatePath(Transform.position, 0.0f, isImmediate: true);

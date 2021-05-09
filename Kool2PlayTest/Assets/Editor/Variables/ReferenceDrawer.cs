@@ -17,7 +17,7 @@ namespace Kool2Play.Editor.Drawer
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
-            if (_popupStyle is null)
+            if (_popupStyle == null)
             {
                 _popupStyle = new GUIStyle(GUI.skin.GetStyle("PaneOptions"));
                 _popupStyle.imagePosition = ImagePosition.ImageOnly;

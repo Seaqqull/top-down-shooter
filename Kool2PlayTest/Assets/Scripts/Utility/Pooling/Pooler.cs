@@ -27,15 +27,15 @@ namespace Kool2Play.Utility.Pooling
 
         public virtual void Awake()
         {
-            if ((_spawnObject is null) ||
-                (_spawnObject.GetComponent<Data.IPoolable>() is null))
+            if ((_spawnObject == null) ||
+                (_spawnObject.GetComponent<Data.IPoolable>() == null))
             {
 #if UNITY_EDITOR
                 Debug.LogError("Poolable object doesn't have IPoolable member or object is empty", gameObject);
 #endif
                 return;
             }
-            if (_spawnPosition is null) _spawnPosition = transform;
+            if (_spawnPosition == null) _spawnPosition = transform;
 
             _spawned = new GameObject("Spawned");
             _queue = new GameObject("Queue");
@@ -93,7 +93,7 @@ namespace Kool2Play.Utility.Pooling
 
         public GameObject Pool()
         {
-            if (_spawnObject is null) return null;
+            if (_spawnObject == null) return null;
 
             if (_objectsToPool.Count == 0)
                 PoolExtend(_expansionAmount);

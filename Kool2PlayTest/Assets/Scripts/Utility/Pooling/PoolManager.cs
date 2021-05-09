@@ -47,7 +47,7 @@ namespace Kool2Play.Utility.Pooling
 
         private void Awake()
         {
-            if (_instance is null)
+            if (_instance == null)
             {
                 _instance = this;
                 Initialize();
@@ -97,7 +97,7 @@ namespace Kool2Play.Utility.Pooling
             GameObject pooled =
                 _poolers.SingleOrDefault((pooler) => pooler.GameObjectId == point.IdOfObject)?.Pool();
 
-            if (pooled is null) return null;
+            if (pooled == null) return null;
 
             Transform objTransform = pooled.transform;
             objTransform.parent = point.Parent;

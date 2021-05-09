@@ -83,7 +83,7 @@ namespace Kool2Play.Utility.Pooling
         {
             base.Awake();
 
-            if (_parent is null)
+            if (_parent == null)
                 _parent = Transform;
         }
 

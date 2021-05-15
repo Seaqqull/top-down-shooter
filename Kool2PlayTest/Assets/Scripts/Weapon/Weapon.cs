@@ -171,7 +171,7 @@ namespace Kool2Play.Weapons
 
         private bool ChangeAmmoType(bool modeDestination)
         {
-            if ((_actionCoroutine is { }) ||
+            if ((_actionCoroutine != null) ||
                 (_ammo.Data.Count <= 1))
                 return false;
 
@@ -191,7 +191,7 @@ namespace Kool2Play.Weapons
 
         private bool ChangeShootingMode(bool modeDestination)
         {
-            if ((_actionCoroutine is { }) ||
+            if ((_actionCoroutine != null) ||
                 (_shooting.Data.Count <= 1))
                 return false;
 
@@ -301,13 +301,13 @@ namespace Kool2Play.Weapons
 
         public void BreakAction()
         {
-            if (_progressCoroutine is { })
+            if (_progressCoroutine != null)
             {
                 StopCoroutine(_progressCoroutine);
                 _progressCoroutine = null;
             }
 
-            if (_actionCoroutine is { })
+            if (_actionCoroutine != null)
             {
                 StopCoroutine(_actionCoroutine);
                 _actionCoroutine = null;
@@ -316,7 +316,7 @@ namespace Kool2Play.Weapons
 
         public bool IsShotPossible()
         {
-            if ((_actionCoroutine is { }) ||
+            if ((_actionCoroutine != null) ||
                 !_shooting.Handler.IsExecutable(this) ||
                 !_shooting.Data[_activeShooting].IsExecutable(this))
                 return false;
@@ -325,7 +325,7 @@ namespace Kool2Play.Weapons
 
         public bool IsReloadPossible()
         {
-            if ((_actionCoroutine is { }) ||
+            if ((_actionCoroutine != null) ||
                         !_ammo.Handler.IsReloadPossible(_ammo.Data[_activeAmmo]))
                 return false;
             return true;
@@ -378,7 +378,7 @@ namespace Kool2Play.Weapons
 
         public bool ChangeAmmoType(int index)
         {
-            if ((_actionCoroutine is { }) ||
+            if ((_actionCoroutine != null) ||
                 ((index < 0) || (index >= _ammo.Data.Count)))
                 return false;
 
@@ -392,7 +392,7 @@ namespace Kool2Play.Weapons
 
         public bool ChangeShootingMode(int index)
         {
-            if ((_actionCoroutine is { }) ||
+            if ((_actionCoroutine != null) ||
                 ((index < 0) || (index >= _shooting.Data.Count)))
                 return false;
 

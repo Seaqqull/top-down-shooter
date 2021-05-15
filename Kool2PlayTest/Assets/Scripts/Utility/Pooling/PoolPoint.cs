@@ -29,10 +29,10 @@ namespace Kool2Play.Utility.Pooling
             {
                 bool flag = true;
 
-                if (_emitCheckerSO is { })
+                if (_emitCheckerSO != null)
                     flag &= _emitCheckerSO.SingleExecution;
 
-                if (_emitCheckerBehaviour is { })
+                if (_emitCheckerBehaviour != null)
                     flag &= _emitCheckerSO.SingleExecution;
 
                 return flag;
@@ -50,8 +50,8 @@ namespace Kool2Play.Utility.Pooling
         {
             get
             {
-                return ((_emitCheckerSO is { }) ||
-                        (_emitCheckerBehaviour is { }));
+                return ((_emitCheckerSO != null) ||
+                        (_emitCheckerBehaviour != null));
             }
         }
         public Transform Parent
@@ -64,10 +64,10 @@ namespace Kool2Play.Utility.Pooling
             {
                 bool poolFlag = false;
 
-                if (_emitCheckerSO is { })
+                if (_emitCheckerSO != null)
                     poolFlag |= _emitCheckerSO.Perform();
 
-                if (_emitCheckerBehaviour is { })
+                if (_emitCheckerBehaviour != null)
                     poolFlag |= _emitCheckerBehaviour.Perform();
 
                 return poolFlag;

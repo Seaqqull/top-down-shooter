@@ -31,10 +31,10 @@ namespace Kool2Play.Scene
         {
             get
             {
-                if (_instance is { }) return _instance;
+                if (_instance != null) return _instance;
 
                 _instance = FindObjectOfType<GameManager>();
-                if (_instance is { }) return _instance;
+                if (_instance != null) return _instance;
 
 
                 GameObject instance = new GameObject(nameof(GameManager), typeof(GameManager));
@@ -74,7 +74,7 @@ namespace Kool2Play.Scene
             if (_player == null)
                 _player = FindObjectOfType<Behaviour.Player.Player>();
 
-            if (_player is { })
+            if (_player != null)
                 _player.SetActiveWeapon(0);
         }
 

@@ -28,10 +28,10 @@ namespace Kool2Play.Utility.Pooling
         {
             get
             {
-                if (_instance is { }) return _instance;
+                if (_instance != null) return _instance;
 
                 _instance = FindObjectOfType<PoolManager>();
-                if (_instance is { }) return _instance;
+                if (_instance != null) return _instance;
 
 
                 GameObject instance = new GameObject(nameof(PoolManager), typeof(PoolManager));

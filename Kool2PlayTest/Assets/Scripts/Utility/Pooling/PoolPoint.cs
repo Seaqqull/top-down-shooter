@@ -33,7 +33,7 @@ namespace Kool2Play.Utility.Pooling
                     flag &= _emitCheckerSO.SingleExecution;
 
                 if (_emitCheckerBehaviour != null)
-                    flag &= _emitCheckerSO.SingleExecution;
+                    flag &= _emitCheckerBehaviour.SingleExecution;
 
                 return flag;
             }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Weapons.Aiming
+namespace TopDownShooter.Weapons.Aiming
 {
     public class Accuracy : Utility.Base.BaseMonoBehaviour
     {

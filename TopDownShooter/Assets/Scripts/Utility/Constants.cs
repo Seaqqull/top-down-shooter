@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Constants
+namespace TopDownShooter.Utility.Constants
 {
     public class Animation
     {

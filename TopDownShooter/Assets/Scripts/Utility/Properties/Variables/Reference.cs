@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Variables
+namespace TopDownShooter.Utility.Variables
 {
     public class Reference<TClass, Tvariable> where TClass : Variable<Tvariable>
     {

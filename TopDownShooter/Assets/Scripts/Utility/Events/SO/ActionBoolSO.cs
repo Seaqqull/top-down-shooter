@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Events
+namespace TopDownShooter.Utility.Events
 {
     [System.Serializable]
     public abstract class ActionBoolSO : ScriptableObject, Data.IAction<bool>

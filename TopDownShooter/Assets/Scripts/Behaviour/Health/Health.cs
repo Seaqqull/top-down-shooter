@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 
 
-namespace Kool2Play.Behaviour
+namespace TopDownShooter.Behaviour
 {
     [Serializable]
     public abstract class Health : MonoBehaviour

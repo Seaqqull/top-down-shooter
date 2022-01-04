@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 
 
-namespace Kool2Play.Weapons.Data
+namespace TopDownShooter.Weapons.Data
 {
     [Serializable]
     public class WeaponAction

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Behaviour.Player
+namespace TopDownShooter.Behaviour.Player
 {
     [RequireComponent(typeof(Rigidbody))]
     public class Player : Entity

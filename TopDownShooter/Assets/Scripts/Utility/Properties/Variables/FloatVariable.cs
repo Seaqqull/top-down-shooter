@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Variables
+namespace TopDownShooter.Utility.Variables
 {
     [CreateAssetMenu(menuName = "Variable/Float")]
     public class FloatVariable : Variable<float>

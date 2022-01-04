@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Weapons.Bullets
+namespace TopDownShooter.Weapons.Bullets
 {
     public abstract class RandomImpactBullet : ImpactBullet
     {

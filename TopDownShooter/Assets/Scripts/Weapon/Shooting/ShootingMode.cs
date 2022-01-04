@@ -1,7 +1,7 @@
 ﻿
 
 
-namespace Kool2Play.Weapons.Shooting
+namespace TopDownShooter.Weapons.Shooting
 {
     public abstract class ShootingMode : Utility.ComputingHandler
     {

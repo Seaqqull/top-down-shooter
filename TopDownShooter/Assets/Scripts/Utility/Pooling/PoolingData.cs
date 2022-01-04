@@ -1,7 +1,7 @@
 
 
 
-namespace Kool2Play.Utility.Pooling.Data
+namespace TopDownShooter.Utility.Pooling.Data
 {
     public interface IPoolable
     {

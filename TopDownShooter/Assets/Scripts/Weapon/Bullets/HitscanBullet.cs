@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-namespace Kool2Play.Weapons.Bullets
+namespace TopDownShooter.Weapons.Bullets
 {
     // Required component
     public abstract class HitscanBullet : RandomImpactBullet

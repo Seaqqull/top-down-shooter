@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-namespace Kool2Play.Editor.Drawer
+namespace TopDownShooter.Editor.Drawer
 {
     public class ReferenceDrawer : PropertyDrawer
     {

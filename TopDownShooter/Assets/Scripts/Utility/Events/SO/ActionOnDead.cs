@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Events
+namespace TopDownShooter.Utility.Events
 {
     [CreateAssetMenu(menuName = "Action/OnDead")]
     class ActionOnDead : EventSO

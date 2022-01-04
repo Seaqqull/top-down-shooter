@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 
 
-namespace Kool2Play.Weapons
+namespace TopDownShooter.Weapons
 {
     public class Weapon : Utility.Base.BaseMonoBehaviour, Utility.IRunLater
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 using System;
 
 
-namespace Kool2Play.Scene
+namespace TopDownShooter.Scene
 {
     
     class GameManager : MonoBehaviour, Utility.IRunLater

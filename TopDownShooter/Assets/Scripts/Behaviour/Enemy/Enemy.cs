@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 
 
-namespace Kool2Play.Behaviour.Enemies
+namespace TopDownShooter.Behaviour.Enemies
 {
     public abstract class Enemy : Entity
     {

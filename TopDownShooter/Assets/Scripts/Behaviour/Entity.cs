@@ -3,13 +3,13 @@ using UnityEngine;
 using System;
 
 
-namespace Kool2Play.Behaviour
+namespace TopDownShooter.Behaviour
 {
     [Serializable]
     public class Entity : Utility.Base.BaseMonoBehaviour, Utility.IRunLater
     {
         // Restriction of attached [Health] components to [Entity]
-        [SerializeField] [Utility.OwnAttribute.ReadOnly] protected Kool2Play.Behaviour.Health _health;
+        [SerializeField] [Utility.OwnAttribute.ReadOnly] protected Health _health;
         [SerializeField] protected Utility.Points.AimPoint _aimPoint;
 
         private static int _idCnter;
@@ -19,7 +19,7 @@ namespace Kool2Play.Behaviour
         protected bool _isDead;
         private int _id;
 
-        public Kool2Play.Behaviour.Health Health
+        public Health Health
         {
             get { return this._health; }
         }

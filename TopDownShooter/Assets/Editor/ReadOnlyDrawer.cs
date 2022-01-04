@@ -2,7 +2,7 @@
 using UnityEngine;
 
 
-namespace Kool2Play.Editor.OwnAttribute
+namespace TopDownShooter.Editor.OwnAttribute
 {
     [CustomPropertyDrawer(typeof(Utility.OwnAttribute.ReadOnlyAttribute))]
     public class ReadOnlyDrawer : PropertyDrawer

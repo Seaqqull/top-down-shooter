@@ -1,6 +1,6 @@
 ﻿
 
-namespace Kool2Play.Utility.Extentions
+namespace TopDownShooter.Utility.Extentions
 {
     public static class VectorOperations
     {

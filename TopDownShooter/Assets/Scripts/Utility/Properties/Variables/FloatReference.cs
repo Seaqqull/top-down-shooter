@@ -1,7 +1,7 @@
 ﻿
 
 
-namespace Kool2Play.Utility.Variables
+namespace TopDownShooter.Utility.Variables
 {
     [System.Serializable]
     public class FloatReference : Reference<FloatVariable, float>

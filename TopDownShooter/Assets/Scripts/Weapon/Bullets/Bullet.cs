@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Weapons.Bullets
+namespace TopDownShooter.Weapons.Bullets
 {
     [CreateAssetMenu(menuName = "Weapon/Bullet/Create")]
     public class Bullet : ScriptableObject

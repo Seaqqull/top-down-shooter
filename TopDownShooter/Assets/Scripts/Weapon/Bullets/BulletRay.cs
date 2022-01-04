@@ -2,7 +2,7 @@
 using System;
 
 
-namespace Kool2Play.Weapons.Bullets
+namespace TopDownShooter.Weapons.Bullets
 {
     public class BulletRay : ImpactBullet
     {

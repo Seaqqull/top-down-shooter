@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.OwnAttribute
+namespace TopDownShooter.Utility.OwnAttribute
 {
     public class ReadOnlyAttribute : PropertyAttribute { }
 

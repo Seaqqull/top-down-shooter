@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 
 
-namespace Kool2Play.Behaviour
+namespace TopDownShooter.Behaviour
 {
     public class InteractiveHealth : Health
     {

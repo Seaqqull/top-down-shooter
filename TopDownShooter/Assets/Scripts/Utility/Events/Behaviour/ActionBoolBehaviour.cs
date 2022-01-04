@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Events
+namespace TopDownShooter.Utility.Events
 {
     public abstract class ActionBoolBehaviour : MonoBehaviour, Data.IAction<bool>
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Pooling
+namespace TopDownShooter.Utility.Pooling
 {
     public class PoolPoint : Points.ScenePoint
     {

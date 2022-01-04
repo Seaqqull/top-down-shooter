@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Weapons.Shooting
+namespace TopDownShooter.Weapons.Shooting
 {
     [CreateAssetMenu(menuName = "Computing/Shooting/Single")]
     public class SimpleShootingMode : ShootingMode

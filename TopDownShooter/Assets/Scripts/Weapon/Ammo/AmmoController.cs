@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Weapons.Ammo
+namespace TopDownShooter.Weapons.Ammo
 {
     [System.Serializable]
     public class AmmoController

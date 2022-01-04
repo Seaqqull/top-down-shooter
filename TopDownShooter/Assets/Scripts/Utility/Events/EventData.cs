@@ -2,7 +2,7 @@
 using System;
 
 
-namespace Kool2Play.Utility.Events.Data
+namespace TopDownShooter.Utility.Events.Data
 {
     [Serializable]
     public enum EventType { None, GameInit, GameEnd, RoomLoad, RoomPreInit, RoomInit, RoomEnd, RoomClear, ConditionalTrigger }

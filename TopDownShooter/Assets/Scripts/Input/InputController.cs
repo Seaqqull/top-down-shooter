@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 
 
-namespace Kool2Play.Utility.Input
+namespace TopDownShooter.Utility.Input
 {
     public class InputController : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Base
+namespace TopDownShooter.Utility.Base
 {
     public class BaseMonoBehaviour : MonoBehaviour
     {

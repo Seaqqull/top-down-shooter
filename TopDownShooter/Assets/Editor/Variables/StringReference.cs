@@ -1,9 +1,10 @@
-﻿using UnityEditor;
+﻿using TopDownShooter.Utility.Variables;
+using UnityEditor;
 
 
-namespace Kool2Play.Editor.Drawer
+namespace TopDownShooter.Editor.Drawer
 {
-    [CustomPropertyDrawer(typeof(Kool2Play.Utility.Variables.StringReference))]
+    [CustomPropertyDrawer(typeof(StringReference))]
     public class StringReferenceDrawer : ReferenceDrawer
     {
 

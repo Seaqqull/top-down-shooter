@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.UI
+namespace TopDownShooter.Utility.UI
 {
     public class IntegerToText : MonoBehaviour
     {

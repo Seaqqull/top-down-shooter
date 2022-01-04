@@ -2,7 +2,7 @@
 using System;
 
 
-namespace Kool2Play.Utility.Events
+namespace TopDownShooter.Utility.Events
 {
     [CreateAssetMenu(menuName = "Action/OnPeriodExpired")]
     public class ActionOnPeriodExpiredSO : ActionBoolSO

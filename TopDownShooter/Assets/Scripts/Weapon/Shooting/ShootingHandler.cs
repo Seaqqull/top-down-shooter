@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Weapons.Shooting
+namespace TopDownShooter.Weapons.Shooting
 {
     /// <summary>
     /// Used for weapon-specific checks

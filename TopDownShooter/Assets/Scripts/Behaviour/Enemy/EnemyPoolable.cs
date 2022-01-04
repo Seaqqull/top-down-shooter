@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Behaviour.Enemies
+namespace TopDownShooter.Behaviour.Enemies
 {
     public abstract class EnemyPoolable : Enemy, Utility.Pooling.Data.IPoolable
     {

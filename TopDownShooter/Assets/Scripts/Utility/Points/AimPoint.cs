@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Utility.Points
+namespace TopDownShooter.Utility.Points
 {
     public class AimPoint : ScenePoint
     {

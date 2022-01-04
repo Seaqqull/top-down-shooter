@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Kool2Play.Weapons.Bullets
+namespace TopDownShooter.Weapons.Bullets
 {
     [RequireComponent(typeof(Aiming.Accuracy))]
     public class ConeHitscanBullet : HitscanBullet
